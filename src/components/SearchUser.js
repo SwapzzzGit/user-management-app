@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import axios from "axios"; // Import Axios for making HTTP requests
 
 function SearchUser({ data }) {
@@ -9,6 +10,21 @@ function SearchUser({ data }) {
   const searchHandler = (e) => {
     const searchTerm = e.target.value.toLowerCase();
     setSearchUser(searchTerm);
+=======
+
+function SearchUser({ data }) {
+  // Search User State
+  const [searchUser, setSearchUser] = useState("");
+  // Filter Searched User State
+  const [filteredUsers, setFilteredUsers] = useState(data);
+
+  // Search User Handler
+  const searchHandler = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    setSearchUser(searchTerm);
+
+    // Filter User Handler
+>>>>>>> f301ae49bf25a0a812f903cad122d8b2faf73098
     const filteredData = data.filter((user) => {
       const userFirstName = user.first.toLowerCase();
       const userLastName = user.last.toLowerCase();
@@ -17,6 +33,7 @@ function SearchUser({ data }) {
         userLastName.startsWith(searchTerm)
       );
     });
+<<<<<<< HEAD
     setFilteredUsers(filteredData);
   };
 
@@ -63,6 +80,17 @@ function SearchUser({ data }) {
     });
 
     setFilteredUsers(updatedFilteredUsers);
+=======
+
+    setFilteredUsers(filteredData);
+  };
+
+  // Handle Enter key press to trigger search
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      searchHandler(e);
+    }
+>>>>>>> f301ae49bf25a0a812f903cad122d8b2faf73098
   };
 
   return (
@@ -71,10 +99,15 @@ function SearchUser({ data }) {
         type="text"
         value={searchUser}
         onChange={searchHandler}
+<<<<<<< HEAD
+=======
+        onKeyPress={handleKeyPress}
+>>>>>>> f301ae49bf25a0a812f903cad122d8b2faf73098
         placeholder="Search User"
       />
       {filteredUsers.map((user) => (
         <div key={user.id}>
+<<<<<<< HEAD
           {editUserId === user.id ? (
             // Edit Mode
             <div>
@@ -102,6 +135,17 @@ function SearchUser({ data }) {
               <button onClick={() => enterEditMode(user.id)}>Edit</button>
             </div>
           )}
+=======
+          <h2>
+            {user.first} {user.last}
+          </h2>
+          <p>Date of Birth: {user.dob}</p>
+          <p>Gender: {user.gender}</p>
+          <p>Email: {user.email}</p>
+          <img src={user.picture} alt={`${user.first} ${user.last}`} />
+          <p>Country: {user.country}</p>
+          <p>Description: {user.description}</p>
+>>>>>>> f301ae49bf25a0a812f903cad122d8b2faf73098
         </div>
       ))}
     </div>

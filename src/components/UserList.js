@@ -10,11 +10,19 @@ function UserList() {
   useEffect(() => {
     // Use axios to fetch data from the specified URL
     axios
+<<<<<<< HEAD
       .get(`http://localhost:3001/`)
       .then((response) => {
         // Set the fetched data in the users state
         setUsers(response.data);
         console.log(response.data);
+=======
+      .get(`https://retoolapi.dev/DUqsDb/data`)
+      .then((response) => {
+        // Set the fetched data in the users state
+        setUsers(response.data);
+        //console.log(response.data);
+>>>>>>> f301ae49bf25a0a812f903cad122d8b2faf73098
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
