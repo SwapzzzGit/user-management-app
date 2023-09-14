@@ -1,13 +1,13 @@
-import UserList from "./components/UserList";
-//import UserListItem from "./components/UserListItem";
+import UserList from "./UserList/UserList";
+import DeleteBox from "./components/DeleteBox/DeleteBox";
 
 function App() {
   return (
     <div className="App">
+      <DeleteBox />
       <UserList />
     </div>
   );
 }
-//<UserListItem />
 
 export default App;
