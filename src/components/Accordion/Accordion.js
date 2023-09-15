@@ -12,11 +12,14 @@ export default function Accordion({ user }) {
 
   // data
 
-  const [editedData, setEditedData] = useState({
-    ...user,
+  const [editedData, setEditedData] = useState(
+    {
+      ...user,
 
-    fullName: user.first + " " + user.last,
-  });
+      fullName: user.first + " " + user.last,
+    },
+    [user]
+  );
 
   useEffect(() => {
     const localStorageData = JSON.parse(localStorage.getItem("usersData"));
@@ -77,6 +80,11 @@ export default function Accordion({ user }) {
   const handleCancelChange = () => {
     toggleEditable();
   };
+  const calculateAge = (userDob) => {
+    const dob = new Date(userDob);
+    const today = new Date();
+    return today.getFullYear() - dob.getFullYear();
+  };
 
   return (
     <div className={`accordion ${isOpen ? "open" : "closed"}`}>
@@ -107,7 +115,7 @@ export default function Accordion({ user }) {
             <input
               className={`${disabled ? "disabled-input" : "endabled-input"}`}
               type="text"
-              value={user.dob}
+              value={calculateAge(user.dob)}
               disabled={disabled}
             />
           </div>
