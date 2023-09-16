@@ -9,7 +9,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out; /* Add a smooth transition */
+  transition: max-height 0.5s ease-in-out;
   max-height: 0;
 }
 
@@ -38,10 +38,10 @@ body {
 }
 
 .open {
-  max-height: 400px; /* Adjust the height based on your content */
+  max-height: 400px;
 }
 .closed {
-  max-height: 50px; /* Keep the closed state */
+  max-height: 50px;
 }
 
 /* Styles for circular images */
@@ -85,10 +85,10 @@ body {
 .endabled-input {
   padding-left: 5px;
   border: 1px solid #ccc;
-  background-color: #fff; /* Example background color */
-  font-weight: normal; /* Set the font weight to normal */
-  color: #333; /* Example text color */
-  cursor: text; /* Set cursor to text when enabled */
+  background-color: #fff;
+  font-weight: normal;
+  color: #333;
+  cursor: text;
   border-radius: 10px;
   height: 30px;
   width: 110px;

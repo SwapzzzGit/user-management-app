@@ -50,15 +50,15 @@
 
 /* Remove background color for "Cancel" text */
 .buttons button:first-child {
-  background-color: transparent; /* Set the background color to transparent */
-  color: #000; /* Set the text color */
+  background-color: transparent;
+  color: #000;
 }
 .x {
-  background-color: transparent; /* Set background color to transparent */
-  border: none; /* Remove the border */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  cursor: pointer; /* Add cursor pointer for interaction */
-  font-size: inherit; /* Inherit font size */
-  color: inherit; /* Inherit text color */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
 }

@@ -24,6 +24,10 @@ function App() {
     const newDeletedUserIds = [...deletedUserIds, userId];
     setDeletedUserIds(newDeletedUserIds);
     localStorage.setItem("deletedUserIds", JSON.stringify(newDeletedUserIds));
+    const updatedDataAfterDelete = mergedData.filter(
+      (item) => !newDeletedUserIds.includes(item.id)
+    );
+    setNewDataAfterFilter(updatedDataAfterDelete);
   };
   const mergedNameData = data.map((item) => {
     return { ...item, fullName: item.first + " " + item.last };

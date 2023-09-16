@@ -7,6 +7,6 @@
 }
 
 input {
-  border: none; /* Remove the border on the input if desired */
-  outline: none; /* Remove the input's outline */
+  border: none;
+  outline: none;
 }
