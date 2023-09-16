@@ -1,38 +1,50 @@
-/* Style for the outer box */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(3px);
+}
 .outer-box {
-  width: 40%;
-  margin: 0 auto;
-  border: 2px solid #000;
+  background-color: #fff;
+  min-width: 410px;
+  height: 110px;
+  margin: 0;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 20px;
+  padding: 7px 15px;
 }
 
 /* Style for the inner container */
 .inner-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
 }
 
 /* Style for the buttons */
 .buttons {
+  padding-top: 10px;
   display: flex;
   justify-content: flex-end;
 }
 
 /* Style for individual buttons */
 .buttons button {
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 30px;
   margin: 5px;
   cursor: pointer;
 }
 
 /* Style for the "Delete" button */
 .buttons button:last-child {
-  background-color: red;
+  background-color: rgba(255, 53, 0, 255);
   color: #fff;
 }
 

@@ -1,26 +1,29 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 .accordion {
   max-width: 420px;
   border: 2px solid #ccc;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out; /* Add a smooth transition */
   max-height: 0;
 }
-/* .onOpen {
-    display: flex;
-    flex-direction: column;
-  } */
+
 .collapsed {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
+
 .img-name {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 .dob-gender {
   padding-top: 20px;
@@ -31,7 +34,7 @@
 }
 .description {
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .open {
@@ -40,32 +43,47 @@
 .closed {
   max-height: 50px; /* Keep the closed state */
 }
+
+/* Styles for circular images */
 .content {
   overflow: hidden;
 }
+
+/* Styles for circular images */
 .circular-image {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  border: 2px solid #ccc;
 }
+
+/* Styles for the edit and save buttons section */
 .edit-save {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
 }
 
+/* Styles for labels */
 .forlabel {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
+/* Styles for disabled input elements */
 .disabled-input {
-  border: none;
+  padding-left: 5px;
+  border: 1px solid transparent;
   background-color: transparent;
   font-weight: normal;
   color: inherit;
+  height: 30px;
+  width: 110px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .endabled-input {
+  padding-left: 5px;
   border: 1px solid #ccc;
   background-color: #fff; /* Example background color */
   font-weight: normal; /* Set the font weight to normal */
@@ -73,7 +91,9 @@
   cursor: text; /* Set cursor to text when enabled */
   border-radius: 10px;
   height: 30px;
-  width: 100px;
+  width: 110px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .flexing-down {
   display: flex;
@@ -81,13 +101,16 @@
 }
 .disabled-textarea {
   min-height: 100px;
-  min-width: 410px;
-  max-width: 410px;
-  border: none;
+  min-width: 400px;
+  max-width: 400px;
+  border: 1px solid transparent;
   background-color: transparent;
   resize: none;
   font-weight: normal;
   color: inherit;
+  border-radius: 20px;
+  padding: 7px;
+  font-family: "Roboto", sans-serif;
 }
 .enabled-textarea {
   border: 1px solid #ccc;
@@ -98,6 +121,7 @@
   resize: none;
   border-radius: 20px;
   padding: 7px;
+  font-family: "Roboto", sans-serif;
 }
 button {
   background-color: transparent;
@@ -105,5 +129,36 @@ button {
   cursor: pointer;
 }
 label {
-  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 200;
+  color: gray;
+  padding-left: 8px;
+}
+.disabled-gender-dropdown {
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-weight: normal;
+  appearance: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  padding-left: 9px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.icon {
+  width: 20px;
+}
+.capsName {
+  margin-left: -10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.selectStyle {
+  height: 33px;
+  width: 108px;
+  color: black;
+}
+.arrow {
+  margin: 8px;
 }

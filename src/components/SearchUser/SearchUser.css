@@ -1,0 +1,12 @@
+.search {
+  border: 2px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  border-radius: 7px;
+  min-width: 435px;
+}
+
+input {
+  border: none; /* Remove the border on the input if desired */
+  outline: none; /* Remove the input's outline */
+}
