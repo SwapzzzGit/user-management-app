@@ -70,24 +70,24 @@ body {
   padding-top: 0 !important;
 }
 
-/* Styles for disabled input elements */
 .disabled-input {
   padding-left: 5px;
   border: 1px solid transparent;
   background-color: transparent;
   font-weight: normal;
-  color: inherit;
+  color: white;  /* Set text color to white */
   height: 30px;
   width: 110px;
   margin-left: 5px;
   margin-right: 5px;
 }
+
 .endabled-input {
   padding-left: 5px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #222223;
   font-weight: normal;
-  color: #333;
+  color: white;  /* Set text color to white */
   cursor: text;
   border-radius: 10px;
   height: 30px;
@@ -107,14 +107,14 @@ body {
   background-color: transparent;
   resize: none;
   font-weight: normal;
-  color: inherit;
+  color: white;
   border-radius: 20px;
   padding: 7px;
   font-family: "Roboto", sans-serif;
 }
 .enabled-textarea {
   border: 1px solid #ccc;
-  background-color: #fff;
+  
   min-height: 100px;
   min-width: 400px;
   max-width: 400px;
@@ -138,6 +138,7 @@ label {
   border: 1px solid transparent;
   background-color: transparent;
   font-weight: normal;
+  color: white;
   appearance: none;
   border-radius: 10px;
   height: 30px;
@@ -157,7 +158,11 @@ label {
 .selectStyle {
   height: 33px;
   width: 108px;
-  color: black;
+  color: white; /* Set the default text color for the select element */
+}
+
+.selectStyle option {
+  color: white; 
 }
 .arrow {
   margin: 8px;

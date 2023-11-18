@@ -4,8 +4,14 @@
   flex-direction: row;
   border-radius: 7px;
   min-width: 435px;
+  -webkit-box-shadow:0px 0px 300px 45px rgba(45,255,196,0.9);
+  -moz-box-shadow: 0px 0px 300px 45px rgba(45,255,196,0.9);
+  box-shadow: 0px 0px 300px 45px rgba(45,255,196,0.9);}
+.search-bar{
+  background-color: transparent;
+  color: white;
+  caret-color: white;
 }
-
 input {
   border: none;
   outline: none;
