@@ -191,7 +191,7 @@ export default function Accordion({ user, onDelete }) {
                 className={`${disabled ? "disabled-input" : "endabled-input"}`}
                 type="text"
                 name="age"
-                value={ edData.age}
+                value={editedData.age}
                 disabled={disabled}
                 onChange={handleAgeChange}
               />
